@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/stats-incr-nanmean",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "Compute an arithmetic mean incrementally, ignoring NaN values.",
   "license": "Apache-2.0",
   "author": {
