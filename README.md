@@ -63,7 +63,7 @@ The [arithmetic mean][arithmetic-mean] is defined as
 ## Usage
 
 ```javascript
-import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@esm/index.mjs';
+import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@v0.1.0-esm/index.mjs';
 ```
 
 #### incrnanmean()
@@ -125,7 +125,7 @@ mu = accumulator();
 
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@esm/index.mjs';
 import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@esm/index.mjs';
-import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@esm/index.mjs';
+import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@v0.1.0-esm/index.mjs';
 
 // Initialize an accumulator:
 var accumulator = incrnanmean();
