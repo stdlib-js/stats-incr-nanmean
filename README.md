@@ -63,7 +63,7 @@ The [arithmetic mean][arithmetic-mean] is defined as
 ## Usage
 
 ```javascript
-import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@deno/mod.js';
+import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@v0.1.0-deno/mod.js';
 ```
 
 #### incrnanmean()
@@ -120,7 +120,7 @@ mu = accumulator();
 ```javascript
 import uniform from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-uniform@deno/mod.js';
 import bernoulli from 'https://cdn.jsdelivr.net/gh/stdlib-js/random-base-bernoulli@deno/mod.js';
-import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@deno/mod.js';
+import incrnanmean from 'https://cdn.jsdelivr.net/gh/stdlib-js/stats-incr-nanmean@v0.1.0-deno/mod.js';
 
 // Initialize an accumulator:
 var accumulator = incrnanmean();
