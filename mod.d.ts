@@ -1,4 +1,4 @@
-/**
+/*
 * @license Apache-2.0
 *
 * Copyright (c) 2025 The Stdlib Authors.
@@ -16,17 +16,22 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 4.1
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@main/index.d.ts"/>
 
-var isnan = require( '@stdlib/math-base-assert-is-nan' );
-var incrmean = require( '@stdlib/stats-incr-mean' );
+/**
+* If provided a value, returns an updated arithmetic mean; otherwise, returns the current arithmetic mean.
+*
+* @param x - value
+* @returns arithmetic mean
+*/
+type accumulator = ( x?: number ) => number | null;
 
 /**
 * Returns an accumulator function which incrementally computes an arithmetic mean, ignoring `NaN` values.
 *
-* @returns {Function} accumulator function
+* @returns accumulator function
 *
 * @example
 * var accumulator = incrnanmean();
@@ -40,32 +45,18 @@ var incrmean = require( '@stdlib/stats-incr-mean' );
 * mu = accumulator( NaN );
 * // returns 2.0
 *
-* mu = accumulator( -5.0 );
-* // returns -1.5
+* mu = accumulator( 3.0 );
+* // returns 2.5
+*
+* mu = accumulator( 4.0 );
+* // returns 3.0
 *
 * mu = accumulator();
-* // returns -1.5
+* // returns 3.0
 */
-function incrnanmean() {
-	var mean = incrmean();
-	return accumulator;
-
-	/**
-	* If provided a value, the accumulator function returns an updated mean. If not provided a value, the accumulator function returns the current mean.
-	*
-	* @private
-	* @param {number} [x] - new value
-	* @returns {(number|null)} mean value or null
-	*/
-	function accumulator( x ) {
-		if ( arguments.length === 0 || isnan( x ) ) {
-			return mean();
-		}
-		return mean( x );
-	}
-}
+declare function incrnanmean(): accumulator;
 
 
 // EXPORTS //
 
-module.exports = incrnanmean;
+export = incrnanmean;
